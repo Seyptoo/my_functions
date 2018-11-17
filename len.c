@@ -11,7 +11,7 @@ int len(char *params)
             cpt = cpt + 1;
 
         } else {
-            return false;
+            return 0;
         }
 
     printf("%d\n", cpt);
