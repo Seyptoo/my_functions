@@ -9,7 +9,6 @@
 #include <string.h>
 #define output_check printf
 
-
 int my_strlen(char strings_len[]){
     /*
      * This function is used to
