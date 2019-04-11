@@ -18,10 +18,9 @@ void my_strlwr(char target_variable[]){
 
     for(cpt_count = 0; cpt_count < strlen(target_variable); cpt_count++)
         if(target_variable[cpt_count] >= 65 && target_variable[cpt_count] <= 96){ // MAJ
-            bind_check("%c", target_variable[cpt_count] + 32);    
-        }
+            bind_check("%c", target_variable[cpt_count] + 32);   
 
-        else if(target_variable[cpt_count] >= 97 && target_variable[cpt_count] <= 120){ // LOW
+        } else if(target_variable[cpt_count] >= 97 && target_variable[cpt_count] <= 120){ // LOW
             bind_check("%c", target_variable[cpt_count]);
         }
 }
@@ -32,5 +31,8 @@ int main()
      * This function will simply call the function my_strlwr() and test the
      * values.
     */
-    my_strlwr("SALUT");
+
+    if(strcmp("", "testvalue") == 0){
+        my_strlwr("TESTVALUE");    
+    }
 }
