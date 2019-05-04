@@ -29,16 +29,11 @@ int main(int argc, char *argv[]){
     int  cpt_count;
     int  file_dess_open;
 
-    //
     execute_file_testing error_file = {3, -1};
-    //
 
     for(cpt_count = 0; argv[cpt_count] != 0; cpt_count++){
-        /*
-         * Creating a loop to
-         * have infinite arguments in loop.
-        */
         file_dess_open = open(argv[cpt_count], O_RDONLY);
+        
         if(file_dess_open != error_file.start_file_open && file_dess_open != error_file.start_nots_open){
             while(read(file_dess_open, &strings_file, 1) > 0)
                 putchar(strings_file);
